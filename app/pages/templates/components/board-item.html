@@ -1,0 +1,23 @@
+{% load static %}
+{% load string_filters %}
+
+{% if size == 'lg' %}
+  <div class="card m-1 p-0">
+    <img src="{% static 'placeholder-image.png' %}" class="card-img-top" alt="image">
+    <div class="card-body">
+      <h5 class="card-title">Title: {{ item.title }}</h5>
+      <h5 class="card-title">Tag: {{ item.tag|space }}</h5>
+      <h5 class="card-title">Parent tag: {{ item.parent_tag|space }}</h5>
+      <p class="card-text">Description: {{ item.description }}</p>
+    </div>
+  </div>
+{% else %}
+  <div class="card m-1 p-0" style="width: 18rem;">
+    <img src="{% static 'placeholder-image.png' %}" class="card-img-top" alt="image">
+    <div class="card-body">
+      <h5 class="card-title">Title: {{ item.title }}</h5>
+      <p class="card-text">Description: {{ item.description }}</p>
+      <a href="{% url 'tag' item.tag %}" class="btn btn-primary">Show subitems</a>
+    </div>
+  </div>
+{% endif %}

@@ -1,0 +1,17 @@
+<div class="menu h-100 d-flex flex-column justify-content-between">
+  <div class="menu__items justify-content-start">
+    {% for item in menu_items %}
+      {% if item.menu_type == 'common' %}
+        {% include 'components/menu-item.html' with item=item %}
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <div class="menu__extra-items justify-content-end">
+    {% for item in menu_items %}
+      {% if item.menu_type == 'extra' %}
+        {% include 'components/menu-item.html' with item=item %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,17 @@
+{% load string_filters %}
+
+<div class="board h-100 overflow-x-hidden overflow-y-auto">
+  <h3 class="text-center text-uppercase">{{ current.tag|space }}</h3>
+  {% if board_items|length %}
+    <div class="board__items" style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr;">
+      {% for item in board_items %}
+        {% include 'components/board-item.html' with item=item %}
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="board__item-content d-flex justify-content-center align-items-center">
+      {% include 'components/board-item.html' with item=current size='lg' %}
+    </div>
+  {% endif %}
+</div>
+
