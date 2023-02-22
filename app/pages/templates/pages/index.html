@@ -1,14 +1,9 @@
 {% extends 'base.html' %}
 
+{% block menu %}
+  {% include 'components/menu.html' %}
+{% endblock %}
+
 {% block content %}
-  <div class="h-100">
-    <div class="row h-100">
-      <div class="col h-100">
-        {% include 'components/menu.html' %}
-      </div>
-      <div class="col-11 h-100">
-        {% include 'components/board.html' with current=current %}
-      </div>
-    </div>
-  </div>
+  {% include 'components/board.html' with current=current %}
 {% endblock %}

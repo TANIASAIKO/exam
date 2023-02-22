@@ -5,8 +5,14 @@
   {% include 'head.html' %}
 </head>
 <body class="h-100 overflow-hidden">
-  {% block content %}
-  {% endblock %}
+  <div class="row h-100">
+    <div class="col-1 h-100">
+      {% block menu %}{% endblock %}
+    </div>
+    <div class="col-11 h-100">
+      {% block content %}{% endblock %}
+    </div>
+  </div>
 </body>
 </html>
 

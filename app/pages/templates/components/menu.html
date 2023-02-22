@@ -1,17 +1,18 @@
-<div class="menu h-100 d-flex flex-column justify-content-between">
+<div class="menu h-100 d-flex flex-column justify-content-between" style="width: 70px">
   <div class="menu__items justify-content-start">
+    {% url "index" as href %}
+    {% include 'components/menu-item.html' with icon_name="logo_dev" href=href %}
+
     {% for item in menu_items %}
-      {% if item.menu_type == 'common' %}
-        {% include 'components/menu-item.html' with item=item %}
-      {% endif %}
+      {% url "tag" item.tag as href %}
+      {% include 'components/menu-item.html' with icon_name=item.tag href=href %}
     {% endfor %}
   </div>
 
   <div class="menu__extra-items justify-content-end">
-    {% for item in menu_items %}
-      {% if item.menu_type == 'extra' %}
-        {% include 'components/menu-item.html' with item=item %}
-      {% endif %}
+    {% for item in extra_menu_items %}
+      {% url item.url_name as href %}
+      {% include 'components/menu-item.html' with icon_name=item.icon_name href=href %}
     {% endfor %}
   </div>
 </div>

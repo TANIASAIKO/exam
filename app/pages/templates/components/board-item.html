@@ -12,12 +12,12 @@
     </div>
   </div>
 {% else %}
-  <div class="card m-1 p-0" style="width: 18rem;">
+  <div class="card m-1 p-0" style="max-width: 100rem;">
     <img src="{% static 'placeholder-image.png' %}" class="card-img-top" alt="image">
     <div class="card-body">
       <h5 class="card-title">Title: {{ item.title }}</h5>
       <p class="card-text">Description: {{ item.description }}</p>
-      <a href="{% url 'tag' item.tag %}" class="btn btn-primary">Show subitems</a>
+      <a href="{% url 'tag' item.tag %}" class="btn btn-primary">Show</a>
     </div>
   </div>
 {% endif %}
