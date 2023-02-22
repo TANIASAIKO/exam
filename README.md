@@ -1,2 +1,2 @@
 # exam
-Site on django
+Site on django and Python
