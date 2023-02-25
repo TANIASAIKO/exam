@@ -1,0 +1,16 @@
+<div class="card mb-4 mb-lg-0">
+  <div class="card-body p-0">
+    <ul class="list-group list-group-flush rounded-3">
+      <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+        <h3>{{ title }}</h3>
+      </li>
+
+      {% for item in items %}
+        <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+          <i class="fab {{ item.icon }} fa-lg" style="color: {{ item.color }};"></i>
+          <a class="mb-0" href="{{ item.link }}">{{ item.label }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
