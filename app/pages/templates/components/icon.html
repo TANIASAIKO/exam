@@ -1,0 +1,11 @@
+
+
+{% if button %}
+  <a class="icon btn btn-outline-secondary p-3" href="{{ href }}">
+    <span class="material-icons">{{ icon_name }}</span>
+  </a>
+{% else %}
+  <a class="icon" href="{{ href }}">
+    <span class="material-icons">{{ icon_name }}</span>
+  </a>
+{% endif %}

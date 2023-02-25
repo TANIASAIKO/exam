@@ -1,0 +1,16 @@
+{% load static %}
+{% load string_filters %}
+
+{% if size == 'lg' %}
+  {% url 'cards' item.suit as href %}
+{% else %}
+  {% url 'card' item.suit item.rank as href %}
+{% endif %}
+
+<a class="card play-card m-1 p-0 flex-grow-1 flex-shrink-1 play-card--{{item.suit}}" href={{href}}>
+  <span class="play-card-suit play-card-suit--tl material-icons">{{ item.icon }}</span>
+  <span class="play-card-suit play-card-suit--tr material-icons">{{ item.icon }}</span>
+  <span class="play-card-suit play-card-suit--bl material-icons">{{ item.icon }}</span>
+  <span class="play-card-suit play-card-suit--br material-icons">{{ item.icon }}</span>
+  <span class="play-card-rank">{{ item.rank }}</span>
+</a>

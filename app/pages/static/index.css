@@ -2,3 +2,42 @@ html,
 body {
   font-family: 'Open Sans', sans-serif !important;
 }
+
+.play-card ,
+.play-card * {
+  text-decoration: none;
+}
+
+.play-card {
+  min-width: 15rem;
+  min-height: 15rem;
+  width: 15rem;
+  height: 15rem;
+  position: relative;
+}
+
+.play-card--diamond, .play-card--heart { color: red; }
+.play-card--spade, .play-card--club { color: black; }
+
+.play-card .play-card-suit {
+  position: absolute;
+  font-size: 50px;
+}
+
+.play-card-suit--tl { top: 15px; left: 15px; }
+.play-card-suit--tr { top: 15px; right: 15px; }
+.play-card-suit--bl { bottom: 15px; left: 15px; }
+.play-card-suit--br { bottom: 15px; right: 15px; }
+
+.play-card-rank {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 50px;
+}
+
+li a {
+  text-decoration: none !important;
+}

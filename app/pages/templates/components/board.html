@@ -1,23 +1,25 @@
 {% load string_filters %}
 
 <div class="board h-100 overflow-x-hidden overflow-y-auto">
-  <h3 class="text-center text-uppercase">
-    {% if current %}
-      <span class="material-icons">{{ current.tag }}</span>
-      {{ current.tag|space }}
-    {% else %}
-      All
-    {% endif %}
-  </h3>
-  {% if board_items|length %}
-    <div class="board__items" style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr;">
+  {% if board_items|length > 1 %}
+    <h3 class="text-center text-uppercase">
+      <span class="material-icons">{{ current.icon }}</span>
+    </h3>
+
+    <div class="board__items d-flex flex-wrap align-items-stretch">
       {% for item in board_items %}
-        {% include 'components/board-item.html' with item=item %}
+        {% include 'components/card.html' with item=item %}
       {% endfor %}
     </div>
   {% else %}
+    <h3 class="text-center text-uppercase">
+      <span class="material-icons">{{ current.icon }}</span>
+      {{ current.get_title|space }}
+      <span class="material-icons">{{ current.icon }}</span>
+    </h3>
+
     <div class="board__item-content d-flex justify-content-center align-items-center">
-      {% include 'components/board-item.html' with item=current size='lg' %}
+      {% include 'components/card.html' with item=current size='lg' %}
     </div>
   {% endif %}
 </div>

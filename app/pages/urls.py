@@ -2,7 +2,8 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('tags/<slug:tag_name>', views.index, name='tag'),
-    path('description', views.description, name='description'),
+    path('', views.index, name='profile'),
+    path('cards/<slug:suit>/', views.cards, name='cards'),
+    path('cards/<slug:suit>/<slug:rank>/', views.cards, name='card'),
+    path('init-cards', views.init_cards, name='init-cards'),
 ]
