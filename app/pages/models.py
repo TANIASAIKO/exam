@@ -33,3 +33,25 @@ class Card(models.Model):
   
   def __str__(self):
     return self.get_title()
+
+
+class MenuItem(models.Model):
+  icon_name = models.CharField(max_length=100)
+  url_name = models.CharField(max_length=100)
+
+class ProgressItem(models.Model):
+  label = models.CharField(max_length=100)
+  progress_start = models.CharField(max_length=100)
+  duration = models.IntegerField()
+  type = models.CharField(
+    max_length=100,
+    choices=ICON_CHOICES,
+    default=ICON_CHOICES[0][0],
+  )
+
+class AdditionalInfo(models.Model):
+  icon = models.CharField(max_length=100)
+  icon_color = models.CharField(max_length=100)
+  link = models.CharField(max_length=100)
+  label = models.CharField(max_length=100)
+  value = models.CharField(max_length=100)

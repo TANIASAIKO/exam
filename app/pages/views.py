@@ -7,11 +7,11 @@ EXTRA_MENU_ITEMS = [
 ]
 
 USER_INFO = [
-    { 'icon': 'fa-user', 'label': 'Full Name', 'value': 'Tatiana Saiko' },
-    { 'icon': 'fa-envelope', 'label': 'Email', 'value': 'tatana155555@gmail.com' },
-    { 'icon': 'fa-mobile', 'label': 'Mobile', 'value': '+375 (29) 279-18-29' },
-    { 'icon': 'fa-phone', 'label': 'Phone', 'value': '+375 (17) 395-17-42' },
-    { 'icon': 'fa-map-marker', 'label': 'Address', 'value': 'Belarus, Minsk' },
+    { 'icon_color': '#6c757d', 'icon': 'fa-user', 'label': 'Full Name', 'value': 'Tatiana Saiko' },
+    { 'icon_color': '#ffc107', 'icon': 'fa-envelope', 'label': 'Email', 'value': 'tatana155555@gmail.com' },
+    { 'icon_color': '#6c757d', 'icon': 'fa-mobile', 'label': 'Mobile', 'value': '+375 (29) 279-18-29' },
+    { 'icon_color': '#6c757d', 'icon': 'fa-phone', 'label': 'Phone', 'value': '+375 (17) 395-17-42' },
+    { 'icon_color': '#ee5555', 'icon': 'fa-map-marker', 'label': 'Address', 'value': 'Belarus, Minsk' },
 ]
 
 TECHNOLOGIES = [
@@ -29,11 +29,11 @@ TOOLS = [
 ]
 
 CONTACTS = [
-    { 'icon': 'fa-github', 'color': '#333333', 'link': 'https://github.com/TANIASAIKO', 'label': 'TANIASAIKO' },
-    { 'icon': 'fa-telegram', 'color': '#55acee', 'link': 'https://t.me/TatsianaSaiko', 'label': '@TatsianaSaiko' },
-    { 'icon': 'fa-instagram', 'color': '#55acee', 'link': 'https://instagram.com/tatana155555?igshid=ZDdkNTZiNTM=', 'label': 'tatana155555' },
-    { 'icon': 'fa-vk', 'color': '#55acee', 'link': 'https://vk.com/id50512221', 'label': 'id50512221' },
-    { 'icon': 'fa-envelope', 'color': '#ffc107', 'link': 'tatana155555@gmail.com', 'label': 'tatana155555@gmail.com' },
+    { 'icon': 'fa-brands fa-github', 'icon_color': '#333333', 'link': 'https://github.com/TANIASAIKO', 'label': 'TANIASAIKO' },
+    { 'icon': 'fa-brands fa-telegram', 'icon_color': '#55acee', 'link': 'https://t.me/TatsianaSaiko', 'label': '@TatsianaSaiko' },
+    { 'icon': 'fa-brands fa-instagram', 'icon_color': '#55acee', 'link': 'https://instagram.com/tatana155555?igshid=ZDdkNTZiNTM=', 'label': 'tatana155555' },
+    { 'icon': 'fa-brands fa-vk', 'icon_color': '#55acee', 'link': 'https://vk.com/id50512221', 'label': 'id50512221' },
+    { 'icon': 'fa fa-envelope', 'icon_color': '#ffc107', 'link': 'tatana155555@gmail.com', 'label': 'tatana155555@gmail.com' },
 ]
 
 def index(request):
